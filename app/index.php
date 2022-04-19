@@ -40,6 +40,11 @@
 
 <script>
     $(document).ready(function() {
-        console.log('mon js');
+        var choices = [];
+        var guessing = false;
+        var memory = $('#memory');
+
+        $('#memory .memory-card.verso').on('click', function() {
+            var $this = $(this);
     });
 </script>
