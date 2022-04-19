@@ -18,19 +18,20 @@
         <h1 class="m-4 text-center">Memory</h1>
 
         <div id="memory">
+        <div id="memory" data-active="1">
             <div class="container">
                 <?php
-                    $card_num = 1;
+                    $num_cards = range(1,NB_CARDS);
+                    shuffle($num_cards);
+
                     for($lines = 1; $lines <= LINES; $lines++) { ?>
                         <div class="row">
                             <?php for ($columns = 1; $columns <= COLUMNS; $columns++) { ?>
+                                <?php $num_card = array_pop($num_cards); ?>
                                 <div class="col d-flex justify-content-center">
-                                    <div class="memory-card memory-card-<?php echo $card_num; ?> recto"></div>
+                                    <div class="memory-card memory-card-<?php echo $num_card; ?> verso" data-num-card="<?php echo $num_card; ?>" data-resolved="0"></div>
                                 </div>
-                            <?php
-                                $card_num++;
-                                }
-                            ?>
+                            <?php } ?>
                         </div>
                 <?php } ?>
             </div>
@@ -46,6 +47,8 @@
 
         $('#memory .memory-card.verso').on('click', function() {
             var $this = $(this);
+
+            // Attention à l'utilisation de data a la place de attr ici
             if (memory.attr('data-active') === '1') {
                 if (guessing) {
                     $this.removeClass('verso');
