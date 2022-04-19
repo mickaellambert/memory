@@ -17,7 +17,6 @@
     <body>
         <h1 class="m-4 text-center">Memory</h1>
 
-        <div id="memory">
         <div id="memory" data-active="1">
             <div class="container">
                 <?php
@@ -83,5 +82,11 @@
                 }
             }
         });
+
+        function check_similar()
+        {
+            choices.sort(function(a, b) { return a - b });
+            return choices[1] - choices[0] === parseInt(<?php echo NB_CARDS / 2; ?>);
+        }
     });
 </script>
