@@ -1,0 +1,31 @@
+#memory {
+  .container {
+    background : cadetblue;
+    .row {
+      background: cadetblue;
+      .memory-card {
+        padding: 10px;
+        margin: 10px;
+        height:100px;
+        width:100px;
+        background-size: cover;
+      }
+      .verso {
+        background: gray;
+        cursor: pointer;
+      }
+      @for $i from 1 through 18 {
+        .memory-card-#{$i}.recto {
+          background-image:url('../images/cards.png');
+          background-position: 0 #{$i * 100}px;
+        }
+        .memory-card-#{$i+18}.recto {
+          background-image:url('../images/cards.png');
+          background-position: 0 #{$i * 100}px;
+        }
+      }
+    }
+  }
+}
+
+
