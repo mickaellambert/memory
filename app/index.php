@@ -46,5 +46,39 @@
 
         $('#memory .memory-card.verso').on('click', function() {
             var $this = $(this);
+            if (memory.attr('data-active') === '1') {
+                if (guessing) {
+                    $this.removeClass('verso');
+                    $this.addClass('recto');
+                    choices.push(parseInt($this.attr('data-num-card')));
+
+                    memory.attr('data-active', '0');
+
+                    setTimeout(
+                        function()
+                        {
+                            if (check_similar()) {
+                                alert('WAH');
+                                $('#memory .memory-card.recto').attr('data-resolved', '1');
+                            }
+                            else {
+                                $('#memory .memory-card.recto[data-resolved="0"]').removeClass('recto').addClass('verso');
+                            }
+
+                            memory.attr('data-active', '1');
+                            choices = [];
+                        }, 1000);
+
+                    guessing = false;
+                }
+                else {
+                    $this.removeClass('verso');
+                    $this.addClass('recto');
+                    choices.push(parseInt($this.attr('data-num-card')));
+
+                    guessing = true;
+                }
+            }
+        });
     });
 </script>
