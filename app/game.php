@@ -1,6 +1,5 @@
 <?php
-require_once '..' . DIRECTORY_SEPARATOR . 'config.php';
-
+require_once 'config.php';
 include 'header.php';
 ?>
 
@@ -42,7 +41,7 @@ include 'header.php';
     var countdown = 0;
 </script>
 
-<script src="../assets/js/lib/jquery.progressBarTimer.min.js"></script>
-<script src="../assets/js/game.js"></script>
+<script src="assets/js/lib/jquery.progressBarTimer.min.js"></script>
+<script src="assets/js/game.js"></script>
 
 <?php include 'footer.php'; ?>

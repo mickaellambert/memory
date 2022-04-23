@@ -7,7 +7,7 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 $entitiesPath = [
-    join(DIRECTORY_SEPARATOR, [__DIR__, 'src', 'Entity'])
+    join(DIRECTORY_SEPARATOR, [__DIR__, 'src', 'app', 'Entity'])
 ];
 
 $isDevMode = true;
