@@ -2,8 +2,7 @@
 use Memory\Entity\Game;
 $entityManager  = require '../bootstrap.php';
 
-require_once '..' . DIRECTORY_SEPARATOR . 'config.php';
-
+require_once 'config.php';
 include 'header.php';
 
 // On récupère notre liste de games afin de pouvoir afficher les meilleurs scores

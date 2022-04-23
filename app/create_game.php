@@ -3,7 +3,7 @@
 
 use Memory\Entity\Game;
 
-require '..' . DIRECTORY_SEPARATOR . 'config.php';
+require 'config.php';
 $entityManager = require '../bootstrap.php';
 
 $player = isset($_POST['player']) ? $_POST['player'] : DEFAULT_PLAYER;
