@@ -1,31 +1,75 @@
+$small: 200px;
+$medium: 1024px;
+$width_height_small: 75;
+$width_height_big: 100;
+
 #memory {
   .container {
-    background : cadetblue;
+    background-image: url('../images/game-background.png');
+    .header {
+      #progressbar {
+        width:700px;
+        margin: 20px 0 20px 0;
+        .progress {
+          height: 30px;
+          background-color:white;
+        }
+        .timer-fail {
+          background-color: red;
+        }
+        .game-success {
+          color: black;
+          font-size: 30px;
+          font-weight: bold;
+          text-align: center;
+          border: 1px solid black;
+          background: white;
+        }
+      }
+    }
     .row {
-      background: cadetblue;
       .memory-card {
         padding: 10px;
         margin: 10px;
-        height:100px;
-        width:100px;
+        height:$width_height_big * 1px;
+        width:$width_height_big * 1px;
         background-size: cover;
+        @media (min-width: $small) and (max-width: $medium) {
+          height:$width_height_small * 1px;
+          width:$width_height_small * 1px;
+        }
       }
       .verso {
-        background: gray;
+        background-image: url('../images/card-back.png');
         cursor: pointer;
       }
-      @for $i from 1 through 18 {
+      @for $i from 1 through 12 {
         .memory-card-#{$i}.recto {
           background-image:url('../images/cards.png');
-          background-position: 0 #{$i * 100}px;
+          background-position: 0 #{$i * $width_height_big * 1px};
+          @media (min-width: $small) and (max-width: $medium) {
+            background-position: 0 #{$i * $width_height_small * 1px};
+          }
         }
-        .memory-card-#{$i+18}.recto {
+        .memory-card-#{$i+12}.recto {
           background-image:url('../images/cards.png');
-          background-position: 0 #{$i * 100}px;
+          background-position: 0 #{$i * $width_height_big * 1px};
+          @media (min-width: $small) and (max-width: $medium) {
+            background-position: 0 #{$i * $width_height_small * 1px};
+          }
+        }
+      }
+    }
+    .footer {
+      .form-win {
+        background: white;
+        padding: 10px;
+        border: 1px black solid;
+        span {
+          font-size: 18px;
+          font-weight: bold;
         }
       }
     }
   }
 }
-
-
