@@ -1,8 +1,24 @@
 #memory .container {
-  background: cadetblue;
+  background-image: url("../images/game-background.png");
 }
-#memory .container .row {
-  background: cadetblue;
+#memory .container .header #progressbar {
+  width: 700px;
+  margin: 20px 0 20px 0;
+}
+#memory .container .header #progressbar .progress {
+  height: 30px;
+  background-color: white;
+}
+#memory .container .header #progressbar .timer-fail {
+  background-color: red;
+}
+#memory .container .header #progressbar .game-success {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid black;
+  background: white;
 }
 #memory .container .row .memory-card {
   padding: 10px;
@@ -11,153 +27,240 @@
   width: 100px;
   background-size: cover;
 }
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card {
+    height: 75px;
+    width: 75px;
+  }
+}
 #memory .container .row .verso {
-  background: gray;
+  background-image: url("../images/card-back.png");
   cursor: pointer;
 }
 #memory .container .row .memory-card-1.recto {
   background-image: url("../images/cards.png");
   background-position: 0 100px;
 }
-#memory .container .row .memory-card-19.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-1.recto {
+    background-position: 0 75px;
+  }
+}
+#memory .container .row .memory-card-13.recto {
   background-image: url("../images/cards.png");
   background-position: 0 100px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-13.recto {
+    background-position: 0 75px;
+  }
 }
 #memory .container .row .memory-card-2.recto {
   background-image: url("../images/cards.png");
   background-position: 0 200px;
 }
-#memory .container .row .memory-card-20.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-2.recto {
+    background-position: 0 150px;
+  }
+}
+#memory .container .row .memory-card-14.recto {
   background-image: url("../images/cards.png");
   background-position: 0 200px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-14.recto {
+    background-position: 0 150px;
+  }
 }
 #memory .container .row .memory-card-3.recto {
   background-image: url("../images/cards.png");
   background-position: 0 300px;
 }
-#memory .container .row .memory-card-21.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-3.recto {
+    background-position: 0 225px;
+  }
+}
+#memory .container .row .memory-card-15.recto {
   background-image: url("../images/cards.png");
   background-position: 0 300px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-15.recto {
+    background-position: 0 225px;
+  }
 }
 #memory .container .row .memory-card-4.recto {
   background-image: url("../images/cards.png");
   background-position: 0 400px;
 }
-#memory .container .row .memory-card-22.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-4.recto {
+    background-position: 0 300px;
+  }
+}
+#memory .container .row .memory-card-16.recto {
   background-image: url("../images/cards.png");
   background-position: 0 400px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-16.recto {
+    background-position: 0 300px;
+  }
 }
 #memory .container .row .memory-card-5.recto {
   background-image: url("../images/cards.png");
   background-position: 0 500px;
 }
-#memory .container .row .memory-card-23.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-5.recto {
+    background-position: 0 375px;
+  }
+}
+#memory .container .row .memory-card-17.recto {
   background-image: url("../images/cards.png");
   background-position: 0 500px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-17.recto {
+    background-position: 0 375px;
+  }
 }
 #memory .container .row .memory-card-6.recto {
   background-image: url("../images/cards.png");
   background-position: 0 600px;
 }
-#memory .container .row .memory-card-24.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-6.recto {
+    background-position: 0 450px;
+  }
+}
+#memory .container .row .memory-card-18.recto {
   background-image: url("../images/cards.png");
   background-position: 0 600px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-18.recto {
+    background-position: 0 450px;
+  }
 }
 #memory .container .row .memory-card-7.recto {
   background-image: url("../images/cards.png");
   background-position: 0 700px;
 }
-#memory .container .row .memory-card-25.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-7.recto {
+    background-position: 0 525px;
+  }
+}
+#memory .container .row .memory-card-19.recto {
   background-image: url("../images/cards.png");
   background-position: 0 700px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-19.recto {
+    background-position: 0 525px;
+  }
 }
 #memory .container .row .memory-card-8.recto {
   background-image: url("../images/cards.png");
   background-position: 0 800px;
 }
-#memory .container .row .memory-card-26.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-8.recto {
+    background-position: 0 600px;
+  }
+}
+#memory .container .row .memory-card-20.recto {
   background-image: url("../images/cards.png");
   background-position: 0 800px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-20.recto {
+    background-position: 0 600px;
+  }
 }
 #memory .container .row .memory-card-9.recto {
   background-image: url("../images/cards.png");
   background-position: 0 900px;
 }
-#memory .container .row .memory-card-27.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-9.recto {
+    background-position: 0 675px;
+  }
+}
+#memory .container .row .memory-card-21.recto {
   background-image: url("../images/cards.png");
   background-position: 0 900px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-21.recto {
+    background-position: 0 675px;
+  }
 }
 #memory .container .row .memory-card-10.recto {
   background-image: url("../images/cards.png");
   background-position: 0 1000px;
 }
-#memory .container .row .memory-card-28.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-10.recto {
+    background-position: 0 750px;
+  }
+}
+#memory .container .row .memory-card-22.recto {
   background-image: url("../images/cards.png");
   background-position: 0 1000px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-22.recto {
+    background-position: 0 750px;
+  }
 }
 #memory .container .row .memory-card-11.recto {
   background-image: url("../images/cards.png");
   background-position: 0 1100px;
 }
-#memory .container .row .memory-card-29.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-11.recto {
+    background-position: 0 825px;
+  }
+}
+#memory .container .row .memory-card-23.recto {
   background-image: url("../images/cards.png");
   background-position: 0 1100px;
+}
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-23.recto {
+    background-position: 0 825px;
+  }
 }
 #memory .container .row .memory-card-12.recto {
   background-image: url("../images/cards.png");
   background-position: 0 1200px;
 }
-#memory .container .row .memory-card-30.recto {
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-12.recto {
+    background-position: 0 900px;
+  }
+}
+#memory .container .row .memory-card-24.recto {
   background-image: url("../images/cards.png");
   background-position: 0 1200px;
 }
-#memory .container .row .memory-card-13.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1300px;
+@media (min-width: 200px) and (max-width: 1024px) {
+  #memory .container .row .memory-card-24.recto {
+    background-position: 0 900px;
+  }
 }
-#memory .container .row .memory-card-31.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1300px;
+#memory .container .footer .form-win {
+  background: white;
+  padding: 10px;
+  border: 1px black solid;
 }
-#memory .container .row .memory-card-14.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1400px;
-}
-#memory .container .row .memory-card-32.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1400px;
-}
-#memory .container .row .memory-card-15.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1500px;
-}
-#memory .container .row .memory-card-33.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1500px;
-}
-#memory .container .row .memory-card-16.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1600px;
-}
-#memory .container .row .memory-card-34.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1600px;
-}
-#memory .container .row .memory-card-17.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1700px;
-}
-#memory .container .row .memory-card-35.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1700px;
-}
-#memory .container .row .memory-card-18.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1800px;
-}
-#memory .container .row .memory-card-36.recto {
-  background-image: url("../images/cards.png");
-  background-position: 0 1800px;
+#memory .container .footer .form-win span {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */
