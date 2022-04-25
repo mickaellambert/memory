@@ -13,7 +13,7 @@ include 'header.php';
         <div class="row">
             <div class="col">
                 <?php
-                $num_cards = range(1,NB_CARDS * 2);
+                $num_cards = range(1,(NB_CARDS % 2 == 1 ? NB_CARDS - 1 : NB_CARDS) * 2);
                 shuffle($num_cards);
 
                 for($lines = 1; $lines <= LINES; $lines++) { ?>
@@ -36,8 +36,8 @@ include 'header.php';
 </div>
 
 <script>
-    var game_time = parseInt('<?php echo GAME_TIME; ?>');
-    var nb_cards  = parseInt('<?php echo NB_CARDS; ?>');
+    var game_time = parseInt('<?php echo min(GAME_TIME, 3600); ?>');
+    var nb_cards  = parseInt('<?php echo NB_CARDS % 2 == 1 ? NB_CARDS - 1 : NB_CARDS; ?>');
     var countdown = 0;
 </script>
 
