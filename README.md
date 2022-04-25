@@ -61,3 +61,22 @@ docker-compose up -d
 ```
 
 , les différentes images se montent bien dans mon container, mais la liaison avec la BDD n'est pas fonctionnelle. 
+
+## Structure
+
+Plusieurs points concernant la structure de fichiers. 
+
+- Le premier concerne le fichier bootstrap.php qui nous permet d'avoir une configuration Doctrine et de nous retourner un entityManager. Il serait sympa comme évolution du projet, et à des fins pédagogiques, de passer ce système en un singleton afin de pouvoir récupérer notre entityManager n'importe où dans notre application et enlever ce return à la fin d'un fichier. 
+- Le second concerne la séparation header / notre page / footer. Pour le moment, ça reste pas très propre. En effet, des balises s'ouvrent dans un fichier et se ferment dans un autre. L'idée c'est d'avoir l'ébauche d'un système MVC à mettre en place. Une fois la gestion des vues mise en place, nous pourrions définir un template de base à notre application.
+
+## Evolutions possibles
+
+- structure MVC
+- Mise en place d'un framework PHP (Symfony, Laravel, Code Igniter)
+- Développer un singleton pour l'Entity Manager
+- Ajouter une fonction de contrôle à la création dynamique des lignes et colonnes du front 
+
+# Conclusion
+
+J'ai vraiment bien aimé développer ce projet, ça faisait un moment que j'avais pas codé, et ça m'a fait un petit quelque chose de retourner sur mon environnement de dev local haha
+Merci d'avoir pris le temps de regarder mon travail et j'espère à très bientôt. 
